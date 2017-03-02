@@ -1,0 +1,36 @@
+
+/* Relocate to general css*/
+[hidden] {
+  display: none  !important;
+}
+
+.filter-piece {
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 6px;
+    margin: 4px;
+    transition: all 0.2s;
+}
+
+.filter-piece.editable {
+    background-color: #ccc;
+    color: black;
+}
+
+.close {
+    color:#555;
+    opacity: 0.8;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.piece-query-control {
+    display: inline-block;
+    width:auto;
+}
+select {
+    display: inline-block;
+    width:auto;
+}
+
+

@@ -1,0 +1,20 @@
+<section class="filter-piece" [ngClass]="{editable: piece.editable}">
+      <form (submit)="updatePiece(elPieceQuery.value, elPieceOperator.value)">
+            <span>{{piece.type}} </span>
+            <span  *ngIf="!piece.editable" class="piece-query" (click)="piece.editable = true">{{piece.operator}}:</span>
+            <select [hidden]="!piece.editable" #elPieceOperator class="form-control input-xs">
+                  <option value="contains">Contains</option>
+                  <option value="not-contains">Does not Contain</option>
+            </select>
+
+            <span  *ngIf="!piece.editable" class="piece-query" (click)="piece.editable = true">{{piece.query}}</span>
+
+
+            <input [hidden]="!piece.editable" #elPieceQuery class="form-control input-xs piece-query-control " [value]="piece.query" />
+            
+            <button type="submit" *ngIf="piece.editable" class="btn btn-xs btn-default">
+                  Apply
+            </button>
+            <button class="close" (click)="remove.emit()">&times;</button>
+      </form>
+</section>

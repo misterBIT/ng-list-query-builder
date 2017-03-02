@@ -1,0 +1,10 @@
+.filters-container {
+    background-color: #333;
+    padding: 0.5em 1em;
+    border-top: 3px solid grey;
+    color:lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:baseline;
+}
+

@@ -1,0 +1,5 @@
+<list-filter [filterTypes]="['campaign', 'adset', 'ad']" (onFilter)="applyFilter($event)"></list-filter>
+
+<ul>
+    <li *ngFor="let item of itemsToDisplay">{{item.name}}</li>
+</ul>

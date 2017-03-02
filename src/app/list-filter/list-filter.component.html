@@ -1,0 +1,30 @@
+<section class="list-filter container">
+  
+
+  <div class="btn-group" dropdown>
+    <button id="split-button" type="button" class="btn btn-info btn-xs">Search</button>
+    <button type="button" class="btn btn-info btn-xs dropdown-toggle-split " dropdownToggle>
+    <span class="caret"></span>
+    <span class="sr-only">Split button!</span>
+  </button>
+    <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="split-button">
+      <li *ngFor="let filterType of filterTypes" role="menuitem">
+        <a class="dropdown-item" href="#" (click)="addFilterPiece(filterType)">{{filterType}}</a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  
+  <section *ngIf="filterPieces.length" class="filters-container">
+    <label>FILTERS:</label>
+     <filter-piece *ngFor="let filterPiece of filterPieces; let idx = index" 
+                  [piece]="filterPiece" 
+                  (remove)="removeFilterPiece(idx)" 
+                  (update)="updateFilterPiece(idx, $event)"
+     ></filter-piece> 
+  </section>
+
+
+
+
+</section>
